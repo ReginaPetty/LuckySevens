@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lucky Sevens</title>
+        <style>
+            table.center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table {
+                border: 1px solid black;
+                border-spacing: 0px;
+            }
+            td {
+                padding: 10px;
+            }
+            td.border {
+                border-right: 1px solid black;
+            }
+            tr:nth-child(even) {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center;">
+            <h1>Lucky Sevens</h1>
+            <form>
+                <div>
+                    <label for="startingBet">Starting Bet:</label>
+                    <input type="text" name="startingBet" value="$0.00">
+                </div>
+                <button style="margin:10px; padding:10px;" type="submit" name="play">Play</button>
+            </form>
+            <hr>
+            <h1>Results</h1>
+        </div>
+        <table class="center">
+            <tr style="background-color: gray">
+                <td class="border">Starting Bet</td>
+                <td>$111</td>
+            </tr>
+            <tr>
+                <td class="border">Total Rolls Before Going Broke</td>
+                <td>777</td>
+            </tr>
+            <tr>
+                <td class="border">Highest Amount Won</td>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td class="border">Roll Count at Highest Amount Won</td>
+                <td>333</td>
+            </tr>
+        </table>
+    </body>
+</html>
