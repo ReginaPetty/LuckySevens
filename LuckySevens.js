@@ -1,7 +1,7 @@
 // works, but need to tidy up:
 // clear results between games, especially after valid then invalid input.
 // hide results until ready to display.
-// change button name to replay.
+// change button name to Play Again.
 
 function rollDice() {
     return Math.ceil(Math.random() * (1 + 6 - 1)) + Math.ceil(Math.random() * (1 + 6 - 1));
@@ -43,6 +43,7 @@ function main() {
     }
 
     writeResults(startingBet, rolls, maxMoney, rollsAtMaxMoney);
+    document.getElementById('playButton').innerText = "Play Again";
 
     return false;
 }
