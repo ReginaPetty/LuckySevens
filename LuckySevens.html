@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Lucky Sevens</title>
+        <script type="text/javascript" src="LuckySevens.js"></script>
         <style>
             table.center {
                 margin-left: auto;
@@ -26,10 +27,10 @@
     <body>
         <div style="text-align:center;">
             <h1>Lucky Sevens</h1>
-            <form>
+            <form onsubmit="return main();">
                 <div>
-                    <label for="startingBet">Starting Bet:</label>
-                    <input type="text" name="startingBet" value="$0.00">
+                    <label for="startingBet">Starting Bet: $</label>
+                    <input type="number" id="startingBet" value="0.00">
                 </div>
                 <button style="margin:10px; padding:10px;" type="submit" name="play">Play</button>
             </form>
@@ -39,19 +40,19 @@
         <table class="center">
             <tr style="background-color: gray">
                 <td class="border">Starting Bet</td>
-                <td>$111</td>
+                <td><span id="startingBetOut"></span></td>
             </tr>
             <tr>
                 <td class="border">Total Rolls Before Going Broke</td>
-                <td>777</td>
+                <td><span id="rolls"></span></td>
             </tr>
             <tr>
                 <td class="border">Highest Amount Won</td>
-                <td>$999</td>
+                <td><span id="maxMoney"></span></td>
             </tr>
             <tr>
                 <td class="border">Roll Count at Highest Amount Won</td>
-                <td>333</td>
+                <td><span id="rollsAtMaxMoney"></span></td>
             </tr>
         </table>
     </body>
