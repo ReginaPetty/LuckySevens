@@ -34,26 +34,31 @@
                 </div>
                 <button style="margin:10px; padding:10px;" type="submit" id="playButton">Play</button>
             </form>
-            <hr>
-            <h1>Results</h1>
         </div>
-        <table class="center">
-            <tr style="background-color: gray">
-                <td class="border">Starting Bet</td>
-                <td><span id="startingBetOut"></span></td>
-            </tr>
-            <tr>
-                <td class="border">Total Rolls Before Going Broke</td>
-                <td><span id="rollsOut"></span></td>
-            </tr>
-            <tr>
-                <td class="border">Highest Amount Won</td>
-                <td><span id="maxMoneyOut"></span></td>
-            </tr>
-            <tr>
-                <td class="border">Roll Count at Highest Amount Won</td>
-                <td><span id="rollsAtMaxMoneyOut"></span></td>
-            </tr>
-        </table>
+
+        <div id="results" style="display:none;">
+            <hr>
+            <h1 style="text-align:center;">Results</h1>
+            <table class="center">
+                <tr style="background-color: gray">
+                    <td class="border">Starting Bet</td>
+                    <td><span id="startingBetOut"></span></td>
+                </tr>
+                <tr>
+                    <td class="border">Total Rolls Before Going Broke</td>
+                    <td><span id="rollsOut"></span></td>
+                </tr>
+                <tr>
+                    <td class="border">Highest Amount Won</td>
+                    <td><span id="maxMoneyOut"></span></td>
+                </tr>
+                <tr>
+                    <td class="border">Roll Count at Highest Amount Won</td>
+                    <td><span id="rollsAtMaxMoneyOut"></span></td>
+                </tr>
+            </table>
+        </div>
+
+
     </body>
 </html>

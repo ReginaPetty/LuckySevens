@@ -44,6 +44,7 @@ function main() {
 
     writeResults(startingBet, rolls, maxMoney, rollsAtMaxMoney);
     document.getElementById('playButton').innerText = "Play Again";
+    document.getElementById('results').style.display = "";
 
     return false;
 }
