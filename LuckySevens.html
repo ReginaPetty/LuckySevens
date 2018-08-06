@@ -29,8 +29,8 @@
             <h1>Lucky Sevens</h1>
             <form onsubmit="return main();">
                 <div>
-                    <label for="startingBet">Starting Bet: $</label>
-                    <input type="number" id="startingBet" value="0.00">
+                    <label for="startingBetIn">Starting Bet: $</label>
+                    <input type="number" id="startingBetIn" value="0.00" autofocus>
                 </div>
                 <button style="margin:10px; padding:10px;" type="submit" name="play">Play</button>
             </form>
@@ -44,15 +44,15 @@
             </tr>
             <tr>
                 <td class="border">Total Rolls Before Going Broke</td>
-                <td><span id="rolls"></span></td>
+                <td><span id="rollsOut"></span></td>
             </tr>
             <tr>
                 <td class="border">Highest Amount Won</td>
-                <td><span id="maxMoney"></span></td>
+                <td><span id="maxMoneyOut"></span></td>
             </tr>
             <tr>
                 <td class="border">Roll Count at Highest Amount Won</td>
-                <td><span id="rollsAtMaxMoney"></span></td>
+                <td><span id="rollsAtMaxMoneyOut"></span></td>
             </tr>
         </table>
     </body>

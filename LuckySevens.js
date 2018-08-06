@@ -1,18 +1,32 @@
+// works, but need to tidy up:
+// clear results between games, especially after valid then invalid input.
+// hide results until ready to display.
+// change button name to replay.
+
 function rollDice() {
     return Math.ceil(Math.random() * (1 + 6 - 1)) + Math.ceil(Math.random() * (1 + 6 - 1));
 }
 
+function writeResults(startingBet, rolls, maxMoney, rollsAtMaxMoney) {
+    document.getElementById('startingBetOut').innerText = startingBet;
+    document.getElementById('rollsOut').innerText = rolls;
+    document.getElementById('maxMoneyOut').innerText = maxMoney;
+    document.getElementById('rollsAtMaxMoneyOut').innerText = rollsAtMaxMoney;
+}
+
 function main() {
-    var startingBet = document.getElementById('startingBet').value;
+    var gameMoney = 0;
+    var maxMoney = 0;  // requirements?  assume initial bet is not included.
+    var rolls = 0;
+    var rollsAtMaxMoney = 0;
+
+    var startingBet = document.getElementById('startingBetIn').value;
     if (startingBet <= 0) {
         alert("The starting bet must be greater than $0.00");
         return false;
     }
 
-    var gameMoney = startingBet;
-    var maxMoney = 0;  // requirements?  assume initial bet is not included.
-    var rolls = 0;
-    var rollsAtMaxMoney = 0;
+    gameMoney = startingBet;
 
     while (gameMoney > 0) {
         var diceTotal = rollDice();
@@ -28,12 +42,7 @@ function main() {
         }
     }
 
-    document.getElementById('startingBetOut').innerText = startingBet;
-    document.getElementById('rolls').innerText = rolls;
-    document.getElementById('maxMoney').innerText = maxMoney;
-    document.getElementById('rollsAtMaxMoney').innerText = rollsAtMaxMoney;
+    writeResults(startingBet, rolls, maxMoney, rollsAtMaxMoney);
 
     return false;
-
-
 }
